@@ -1,3 +1,51 @@
-<p>
-  employee-detail works!
-</p>
+<div class="card border-primary">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-sm-7">
+
+        <div class="row">
+          <div class="col-sm-3">
+            Name
+          </div>
+          <div class="col-sm-6">
+            {{user?.name}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3">
+            zip
+          </div>
+          <div class="col-sm-6">
+            {{user?.zip}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3">
+            City
+          </div>
+          <div class="col-sm-6">
+            {{user?.city}}
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-3">
+            State
+          </div>
+          <div class="col-sm-6">
+            {{user?.state}}
+          </div>
+        </div>
+
+
+
+      </div>
+      <div class="col-sm-2 offset-sm-3">
+        <img class="card-img" [src]="user?.avatar_url">
+      </div>
+    </div>
+  </div>
+  <div class="card-footer bg-transparent border-primary">
+    <input type="button" class="btn btn-default" 
+    value="Go Back" [routerLink]="['/employee']"/>
+  </div>
+</div>

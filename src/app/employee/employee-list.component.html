@@ -1,10 +1,25 @@
-<p>
-  employe-list works!
-</p>
 
-<ul class="list-group">
-  <li class="list-group-item" *ngFor="let emp of employees">
-   Name : {{emp.Name}} <br>
-   City : {{emp.City}}
-  </li>
-</ul>
+<div class="row">
+  <div class="col-sm-3" style="padding:10px"
+   *ngFor="let emp of gitUsers">
+      <div class="card" >
+         <div class="card-body">
+           
+                <img class="card-img-top" style="cursor:pointer"
+                [routerLink]="['/employee/details',emp.id]" [src]="emp.avatar_url"
+                  alt="Card image cap"> 
+          
+          
+                <h5 class="card-title">Card title that wraps to a new line</h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+           
+           </div>
+        </div>
+  </div>
+   <div *ngIf="!gitUsers">
+     {{"Loading..."}}
+
+   </div>
+</div>
+
+

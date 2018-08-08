@@ -1,10 +1,11 @@
 export class Employee {
-         Id:number;
-         Name:string;
-         EmployeeId:number;
-         Street1:string;
-         Street2:string;
-         City:string;
-         State:string;
-         zip:number;
+    id: number;
+    name: string;
+    employeeId: number;
+    avatar_url: string;
+    street1: string;
+    street2: string;
+    city: string;
+    state: string;
+    zip: number;
 }

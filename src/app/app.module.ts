@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -9,6 +10,7 @@ import { EmployeeListComponent } from './employee/employee-list.component';
 import { EmployeeDetailComponent } from './employee/employee-detail/employee-detail.component';
 import { AddEmployeeComponent } from './employee/add-employee/add-employee.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { EmployeeService } from './employee/employee.service';
 
 
 @NgModule({
@@ -22,9 +24,10 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [EmployeeService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
